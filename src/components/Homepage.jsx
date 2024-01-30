@@ -1,8 +1,10 @@
 import React from 'react'
-import img1 from '../Assets/Yoga.gif';
-import img2 from '../Assets/Yoga (1).gif';
-import img3 from '../Assets/Heartbeat.gif';
+import img1 from '../Assets/yoga.png';
+import img2 from '../Assets/yoga (1).png';
+import img3 from '../Assets/heartbeat.png';
 import '../Styles/Hompage.css';
+// import { HashLink } from 'react-router-hash-link';
+// import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -24,18 +26,19 @@ const Homepage = () => {
             <div className="lowericon">
             <span>
                 <img src={img1} alt=""  style={{height:"50px" ,width:"50px"}}/>
-                <p>Hard to feel clam and sleppy</p>
-                <button>bookimnga a call</button>
+                <p>Hard to feel clam and slepp because of stress</p>
+                <button>Book a trial@99</button>
             </span>
             <span>
-            <img src={img3} alt=""  style={{height:"50px" ,width:"50px"}}/>
-            <p>Lorem ipsum dolor sit amet.</p>
-            <button>book</button>
+                <img src={img3} alt=""  style={{height:"50px" ,width:"50px"}}/>
+                <p>If you have paipations and breathing trouble</p>
+                {/* <Link to='productid'>Subscription</Link> */}
+                <button>Subscription</button>
             </span>
             <span>
                 <img src={img2} alt="" style={{height:"50px" ,width:"50px"}}/>
-                Lorem ipsum dolor sit amet consectetur.
-                <button>book a call</button>
+                <p>You have been advised by Doctors to avoid physical activity</p>
+                <button>Book a call</button>
             </span>
             </div>
         </div>

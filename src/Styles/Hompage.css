@@ -1,50 +1,30 @@
 .homepage {
     align-items: center;
     padding: 50px;
-    background-color: #ecf0f1; /* Change the background color as needed */
-    color: #34495e; /* Change the text color as needed */
+    background-color: #ecf0f1;
+    color: #34495e; 
   }
   .upper{
     display: flex;
   }
   
-  
-  /* .lower{
 
-  } */
   .lowericon{
     display: flex;
     justify-content: space-around;
   }
-  /* .hp-icon {
-    margin-top: 50px;
-    text-align: center;
-    display: flex;
+  span{
+    display: grid;
+    justify-items: center;
   }
-  
-  .hp-lower h1 {
-    margin-bottom: 20px;
-  }
-  
-  .hp-lower span {
-    display: block;
-    margin-bottom: 40px;
-  } */
-  
-  /* img {
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #3498db; 
-    color: white;
-    padding: 8px 15px;
+  .lowericon button{
+    background: #34495e;
+    width: 50%;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
+    color: white;
   }
-  
-  button:hover {
-    background-color: #2980b9;  } */
+  .lowericon button:hover{
+    cursor: pointer;
+    background-color: rgb(242, 147, 52);
+  }

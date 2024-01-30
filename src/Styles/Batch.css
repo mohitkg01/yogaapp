@@ -3,10 +3,16 @@
     margin: 20px;
   }
   
-  .batch div {
-    display: grid;
+  .batch button{
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(121, 163, 200);
+    border-style: hidden;
+    border-radius: 5px;
   }
-  
   .batch img {
     width: 100%;
     height: auto; 
@@ -14,21 +20,21 @@
   
   .batch h1 {
     margin-top: 20px;
+    margin-left: 20px;
   }
-  
-  .batch p {
-    margin-bottom: 10px;
+  .batch p{
+    margin-left: 20px;
   }
-  
-  
   .batch > div {
-    margin-top: 20px;
+    margin-left: 20px;
   }
  
   .batch select {
     margin-top: 10px;
     padding: 5px;
   }
-  
-
+.time>span{
+  display: flex;
+  margin-left: 10px;
+}
   

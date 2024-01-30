@@ -1,0 +1,28 @@
+.name{
+    display: grid;
+    justify-content: center;
+    margin-top: 10%;
+}
+.name input{
+    margin-bottom: 10px;
+    width: 420px;
+    height: 40px;
+}
+button{
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(157, 245, 130);
+}
+.lower{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.lower>:nth-child(1){
+    margin-right: 15%;
+   
+}

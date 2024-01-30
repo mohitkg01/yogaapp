@@ -10,7 +10,7 @@ const Header = () => {
         <div className='h-right'>
             <Link to="productid">Product</Link>
             <Link to="batchid">Batch</Link>
-            <Link>Login</Link>
+            <Link to='login'>Login</Link>
         </div>
     </div>
   )

@@ -1,3 +1,4 @@
+import Login from './Login/Login';
 import Batch from './components/Batch';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
@@ -13,6 +14,7 @@ function App() {
         <Route path="/home" element={<Homepage/>}/>
         <Route path="/productid" element={<Productpage/>}/>
         <Route path='/batchid' element={<Batch/> }/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
       </BrowserRouter>
     </div>

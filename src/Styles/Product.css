@@ -1,8 +1,3 @@
-/* .product{
-    display: flex;
-} */
-/* Product.css */
-
 .product {
     display: flex;
 
@@ -31,7 +26,7 @@
   .box{
     background-color: rgb(242, 242, 247);
     margin: 20px;
-    padding: 20px;
+    padding: 12px;
     border-radius: 60px;
     display: flex;
     justify-content: space-between;
@@ -44,8 +39,13 @@
     background-color: #bfcbe69c;
     padding: 0 20px 0 20px;
     border-radius: 30%;
+    border: none;
   }
   .box div{
     margin-left: 20px;
-    /* padding-left: 10px; */
+    
+  }
+  .box button:hover{
+    cursor: pointer;
+    background-color: burlywood;
   }
