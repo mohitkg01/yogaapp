@@ -41,16 +41,16 @@ const timeOption=["5:00-6:00 AM",
   },[]);
 
   const generateDateoption=()=>{
-    return dateOption.map((date)=>(
-      <option value={date}>
+    return dateOption.map((date,idx)=>(
+      <option value={date} key={idx}>
         {date}
       </option>
     ))
   }
 
   const generateTimeOption=()=>{
-    return timeOption.map((time)=>(
-      <option value={time} >
+    return timeOption.map((time,idx)=>(
+      <option value={time} key={idx}>
         {time}
         </option>
     ))

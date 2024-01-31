@@ -14,7 +14,7 @@ const Homepage = () => {
                repellendus molestiae incidunt. Laudantium harum optio ratione temporibus voluptatum commodi ea ad porro numquam, consequuntur dolore?</p>
         </div>
         <div className="hp-right">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VM8PH_LeJg4?si=yjgcLs0Thk4XhhWZ" alt="Youtube" title="YouTube video player" 
+        <iframe  src="https://www.youtube.com/embed/VM8PH_LeJg4?si=yjgcLs0Thk4XhhWZ"  title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen></iframe>
         </div>

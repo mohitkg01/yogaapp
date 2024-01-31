@@ -13,7 +13,7 @@
   }
   
   .p-left img {
-    width: 110%;
+    width: auto;
     height: auto;
     border-radius: 5px;
    
@@ -27,7 +27,7 @@
     background-color: rgb(242, 242, 247);
     margin: 20px;
     padding: 12px;
-    border-radius: 60px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
   }
@@ -38,7 +38,7 @@
   .box button{
     background-color: #bfcbe69c;
     padding: 0 20px 0 20px;
-    border-radius: 30%;
+    border-radius: 15%;
     border: none;
   }
   .box div{
@@ -49,3 +49,27 @@
     cursor: pointer;
     background-color: burlywood;
   }
+
+  @media (max-width: 768px) {
+    .product {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .p-left {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px; 
+    }
+
+    .p-right {
+        width: 100%;
+    }
+    .p-left>img{
+        width:100%;
+    }
+    .box button{
+        width: 34%;
+        
+    }
+}

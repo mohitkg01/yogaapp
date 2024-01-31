@@ -49,3 +49,18 @@ button:hover{
   cursor: pointer;
   background: rgb(98, 96, 96);
 }
+
+@media (max-width: 768px) {
+  button {
+      margin-left: 0;
+      width: 100%;
+  }
+
+  .batch h1,
+  .batch p,
+  .batch > div,
+  .batch div,
+  .time p {
+      margin-left: 0;
+  }
+}
