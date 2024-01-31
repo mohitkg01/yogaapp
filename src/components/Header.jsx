@@ -8,14 +8,14 @@ const Header = () => {
   return (
     <div className="head">
         <div className='h-left'>
-            <Link to="home">Yoga for Mind</Link>
+            <Link to="homepage">Yoga for Mind</Link>
         </div>
         <div className='h-right'>
-            <Link to="productid">Product</Link>
-            <Link to="batchid">Batch</Link>
-            {isAuthenticated && <span>{user.nickname}</span>}
+            <Link to="product">Product</Link>
+            <Link to="batch">Batch</Link>
             {isAuthenticated ?(<Link onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</Link>)
             :(<Link onClick={() => loginWithRedirect()}>Login</Link>)}
+             {isAuthenticated && <span>{user.nickname}</span>}
         </div>
     </div> 
   )

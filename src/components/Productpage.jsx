@@ -25,7 +25,7 @@ const Productpage = () => {
             // console.log(data);
     })
   return (
-    <div className="product" id='productid'>
+    <div className="product" id='product'>
         <div className='p-left'>
             <img src={image} alt="" style={{width:"500px",height:"400px"}} />
         <h1>Whats your yoga for mind</h1>

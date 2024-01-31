@@ -1,4 +1,3 @@
-import Login from './Login/Login';
 import Batch from './components/Batch';
 import Header from './components/Header';
 import Homepage from './components/Homepage';
@@ -11,14 +10,16 @@ function App() {
       <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path="/home" element={<Homepage/>}/>
-        <Route path="/productid" element={<Productpage/>}/>
-        <Route path='/batchid' element={<Batch/> }/>
-        <Route path='/login' element={<Login/>}/>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="homepage" element={<Homepage/>}/>
+        <Route path="/product" element={<Productpage/>}/>
+        <Route path='/batch' element={<Batch/> }/>
       </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
+
 
 export default App;

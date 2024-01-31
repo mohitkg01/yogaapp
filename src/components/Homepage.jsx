@@ -3,12 +3,10 @@ import img1 from '../Assets/yoga.png';
 import img2 from '../Assets/yoga (1).png';
 import img3 from '../Assets/heartbeat.png';
 import '../Styles/Hompage.css';
-// import { HashLink } from 'react-router-hash-link';
-// import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
-    <div className="homepage" id='home'>
+    <div className="homepage" id='homepage'>
         <div className="upper">
         <div className="hp-left"> 
             <h1>Yoga for mind</h1>
@@ -16,7 +14,7 @@ const Homepage = () => {
                repellendus molestiae incidunt. Laudantium harum optio ratione temporibus voluptatum commodi ea ad porro numquam, consequuntur dolore?</p>
         </div>
         <div className="hp-right">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VM8PH_LeJg4?si=yjgcLs0Thk4XhhWZ" title="YouTube video player" 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VM8PH_LeJg4?si=yjgcLs0Thk4XhhWZ" alt="Youtube" title="YouTube video player" 
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         allowfullscreen></iframe>
         </div>

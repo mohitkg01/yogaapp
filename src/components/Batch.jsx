@@ -54,7 +54,7 @@ intervals(intime,outtime);
     setSelectedTime(event.target.value);
   };
   return (
-    <div className="batch" id="batchid">
+    <div className="batch" id="batch">
       <div><img src={imz} alt="" style={{height:"400px"}} /></div>
           <h1>What is in your mind</h1>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
