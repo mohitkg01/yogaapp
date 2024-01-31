@@ -80,8 +80,8 @@ const timeOption=["5:00-6:00 AM",
          <div className='time'>
             <h1>6 months</h1>
             <span>
-            <span style={{textDecoration:"line-through",opacity:"60%"}}>₹ 5000</span>
-            <span>₹ 5000</span>
+            <span style={{textDecoration:"line-through",opacity:"60%"}}>₹ 6000</span>
+            <span>₹ 4500</span>
             </span>
             <span>
           <div className='date'>
