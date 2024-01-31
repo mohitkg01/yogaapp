@@ -5,7 +5,7 @@ import moment from 'moment';
 const Batch = () => {
 const [selectDate,setDate]=useState(null);
 const [selectedTime,setSelectedTime]=useState(null);
-const [dateOption,setDateOptiom]=useState([]);
+const [dateOption,setDateOption]=useState([]);
 
 const timeOption=["5:00-6:00 AM",
                   "6:00-7:00 AM",
@@ -26,7 +26,7 @@ const timeOption=["5:00-6:00 AM",
     setSelectedTime(event.target.value);}
 
   useEffect(()=>{
-    const start=moment();
+    const start = moment();
     const end=moment().add(15,'d');
     const dates=[];
     let currentDate=start.clone();
@@ -34,9 +34,9 @@ const timeOption=["5:00-6:00 AM",
 
     while(currentDate.isBefore(end)){
       dates.push(currentDate.format('YYYY-MM-DD'));
-     
+     currentDate.add(1,'d');
     }
-    setDateOptiom(dates);
+    setDateOption(dates);
   },[]);
 
   const generateDateoption=()=>{

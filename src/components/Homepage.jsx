@@ -30,7 +30,6 @@ const Homepage = () => {
             <span>
                 <img src={img3} alt=""  style={{height:"50px" ,width:"50px"}}/>
                 <p>If you have paipations and breathing trouble</p>
-                {/* <Link to='productid'>Subscription</Link> */}
                 <button>Subscription</button>
             </span>
             <span>

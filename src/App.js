@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<Homepage/>} />
         <Route path="homepage" element={<Homepage/>}/>
         <Route path="/product" element={<Productpage/>}/>
-        <Route path='/batch' element={<Batch/> }/>
+        <Route path="/batch" element={<Batch/> }/>
       </Routes>
       </BrowserRouter>
     </div>
