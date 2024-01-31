@@ -23,7 +23,8 @@ const timeOption=["5:00-6:00 AM",
   };
 
   const handleTimeChange = (event) => {
-    setSelectedTime(event.target.value);}
+    setSelectedTime(event.target.value);
+  }
 
   useEffect(()=>{
     const start = moment();
@@ -54,6 +55,21 @@ const timeOption=["5:00-6:00 AM",
         </option>
     ))
   };
+
+  const onSubmit=(()=>{
+    if (!selectedTime && !selectDate) {
+      alert("Please select a date and time");
+    }
+    else if (!selectedTime) {
+      alert("Please select a time");
+    }
+    else  if (!selectDate) {
+      alert("Please select a date");
+    } 
+     else {
+      alert("Response Submitted");
+    }
+  })
   
   return (
     <div className="batch" id="batch">
@@ -69,8 +85,8 @@ const timeOption=["5:00-6:00 AM",
             </span>
             <span>
           <div className='date'>
-          <h1>Pick start date</h1>
-          <select value={selectDate} onChange={handleDateChange}>
+          <p>Pick start date</p>
+          <select value={selectDate} onChange={handleDateChange} >
             <option value="">
               Select Date
             </option>
@@ -78,7 +94,7 @@ const timeOption=["5:00-6:00 AM",
           </select>
         </div> 
         <div className="slot">
-          <h1>Select time slot</h1>
+          <p>Select time slot</p>
           <select value={selectedTime} onChange={handleTimeChange}>
             <option value="">
               Select Time Slot
@@ -88,7 +104,7 @@ const timeOption=["5:00-6:00 AM",
         </div>
             </span>
         </div>
-        <button>Submit</button>
+        <button onClick={onSubmit}>Response</button>
     </div>
   )
 }
