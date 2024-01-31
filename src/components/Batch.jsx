@@ -1,58 +1,60 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import imz from '../Assets/img.jpg';
 import '../Styles/Batch.css'
 import moment from 'moment';
-
-
-
 const Batch = () => {
-  let intime = "12:00 Pm"
-  let outtime = "08:00 Pm"
-  const [selectDate,setDate]=useState(null);
-  const [selectedTime,setSelectedTime]=useState(null);
-  const [result,setResult]=useState([]);
+const [selectDate,setDate]=useState(null);
+const [selectedTime,setSelectedTime]=useState(null);
+const [dateOption,setDateOptiom]=useState([]);
 
-const intervals=((startString,endString)=>{
-  var start = moment(startString, 'hh:mm a');
-    var end = moment(endString, 'hh:mm a');
-    start.minutes(Math.ceil(start.minutes() / 60) * 60);
+const timeOption=["5:00-6:00 AM",
+                  "6:00-7:00 AM",
+                  "7:00-8:00 AM",
+                  ,"8:00-9:00 AM",
+                  "9:00-10:00 AM",
+                  "4:00-5:00 PM",
+                  "5:00-6:00 PM",
+                  "6:00-7:00 PM",
+                  "7:00-8:00 PM",
+                  ,"8:00-9:00 PM" ];
 
-    var current = moment(start);
-
-    while (current <= end) {
-      if (result.includes(current.format('hh:mm a'))) {
-        return null
-      }
-      else {
-        result.push(current.format('hh:mm a'));
-        current.add(60, 'minutes');
-      }
-    }
-
-
-    return result;
-})
-intervals(intime,outtime);
-  const generateDateoption=()=>{
-    const currentDate=new Date();
-    const dateOption=[];
-
-    for(let i=0;i<15;i++){
-      const futureDate=new Date(currentDate);
-      futureDate.setDate(currentDate.getDate()+i);
-      const formatDate=futureDate.toLocaleDateString('en-US',{weekday:'short',monty:'short',day:'numeric'});
-      dateOption.push(<li key={i} value={formatDate}
-      on>{formatDate}</li>)
-    }
-    return dateOption;
-  };
   const handleDateChange = (event) => {
     setDate(event.target.value);
   };
 
   const handleTimeChange = (event) => {
-    setSelectedTime(event.target.value);
+    setSelectedTime(event.target.value);}
+
+  useEffect(()=>{
+    const start=moment();
+    const end=moment().add(15,'d');
+    const dates=[];
+    let currentDate=start.clone();
+    console.log(currentDate);
+
+    while(currentDate.isBefore(end)){
+      dates.push(currentDate.format('YYYY-MM-DD'));
+     
+    }
+    setDateOptiom(dates);
+  },[]);
+
+  const generateDateoption=()=>{
+    return dateOption.map((date)=>(
+      <option value={date}>
+        {date}
+      </option>
+    ))
+  }
+
+  const generateTimeOption=()=>{
+    return timeOption.map((time)=>(
+      <option value={time} >
+        {time}
+        </option>
+    ))
   };
+  
   return (
     <div className="batch" id="batch">
       <div><img src={imz} alt="" style={{height:"400px"}} /></div>
@@ -66,10 +68,10 @@ intervals(intime,outtime);
             <span>₹ 5000</span>
             </span>
             <span>
-            <div className='date'>
+          <div className='date'>
           <h1>Pick start date</h1>
           <select value={selectDate} onChange={handleDateChange}>
-            <option value="" disabled>
+            <option value="">
               Select Date
             </option>
             {generateDateoption()}
@@ -78,14 +80,10 @@ intervals(intime,outtime);
         <div className="slot">
           <h1>Select time slot</h1>
           <select value={selectedTime} onChange={handleTimeChange}>
-            <option value="" disabled>
+            <option value="">
               Select Time Slot
             </option>
-            {result.map((time, index) => (
-              <option key={index} value={time}>
-                {time}
-              </option>
-            ))}
+           {generateTimeOption()}
           </select>
         </div>
             </span>

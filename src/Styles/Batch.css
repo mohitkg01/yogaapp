@@ -27,6 +27,7 @@
   }
   .batch > div {
     margin-left: 20px;
+    background-color:bisque;
   }
  
   .batch select {
