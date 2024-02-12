@@ -25,17 +25,17 @@ const Homepage = () => {
             <span>
                 <img src={img1} alt=""  style={{height:"50px" ,width:"50px"}}/>
                 <p>Hard to feel clam and slepp because of stress</p>
-                <button>Book a trial@99</button>
+                <button><Link  to="/trial">Book a trial@99</Link></button>
             </span>
             <span>
                 <img src={img3} alt=""  style={{height:"50px" ,width:"50px"}}/>
                 <p>If you have paipations and breathing trouble</p>
-                <Link to="/batch">Subscription</Link>
+                <button><Link to="/batch">Subscription</Link></button>
             </span>
             <span>
                 <img src={img2} alt="" style={{height:"50px" ,width:"50px"}}/>
                 <p>You have been advised by Doctors to avoid physical activity</p>
-                <button>Book a call</button>
+                <button><Link  to="/trial">Book a call</Link></button>
             </span>
             </div>
         </div>

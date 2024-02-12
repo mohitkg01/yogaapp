@@ -29,19 +29,13 @@
     cursor: pointer;
     background-color: rgb(242, 147, 52);
   }
-  .lowericon a{
-    background: #34495e;
+   .lowericon a{
+  
     color: white;
-    width: 50%;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    padding-top: 8px;
+      text-decoration: none;
+    
   }
-  .lowericon a:hover{
-    cursor: pointer;
-    background-color: rgb(242, 147, 52);
-  }
+ 
   @media (max-width: 768px) {
     .homepage {
         padding: 30px;

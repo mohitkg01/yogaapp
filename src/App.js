@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Homepage from './components/Homepage';
 import Productpage from './components/Productpage';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Bookpage from './components/Bookpage';
 function App() {
   const [month,setmonth]=useState();
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="homepage" element={<Homepage/>}/>
         <Route path="/product" element={<Productpage getData={getData}/>}/>
         <Route path="/batch" element={<Batch propsValue={month}/>}/>
+        <Route path='/trial' element={<Bookpage/>}/>
       </Routes>
       </BrowserRouter>
     </div>
