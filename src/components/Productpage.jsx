@@ -1,28 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import image from '../Assets/imgz.jpg';
 import '../Styles/Product.css';
-const Productpage = () => {
-    const [data,setdata]=useState(1);
-    const list=[
-        {months:12,
-            price:10000,
-           offerprice:7000 },
-        {months:6,
-        price:6000,
-       offerprice:4500 },
-      {months:3,
-        price:4500,
-        offerprice:3000},
-      {months:1,
-      price:2000,
-    offerprice:1200}];
+import { Link } from 'react-router-dom';
+const Productpage = (prop) => {
+
+    // const [data,setdata]=useState(1);
+    const list = [
+      { months: 12, price: 10000, offerprice: 7000 },
+      { months: 6, price: 6000, offerprice: 4500 },
+      { months: 3, price: 4500, offerprice: 3000 },
+      { months: 1, price: 2000, offerprice: 1200 }
+  ];
     
-
-
     const addproduct=((props)=>{
-          
-            setdata(props.months)
-            // console.log(data);
+            // setdata(props.months)
+            // console.log(props);
+            prop.getData(props);
     })
   return (
     <div className="product" id='product'>
@@ -45,7 +38,8 @@ const Productpage = () => {
                     <span>₹ {item.offerprice}</span>
                     </span>
                     </div>
-                    <button onClick={()=>addproduct(item)} >Buy now</button>
+                    <Link to="/batch">
+                    <button onClick={()=>addproduct(item)} >Buy now</button></Link>
                 </div>
                 ))} 
             </div>
@@ -55,7 +49,7 @@ const Productpage = () => {
                 doloribus soluta dolorem mollitia temporibus 
                 error impedit eum voluptatum natus.</p>
         </div>
-    </div>
+    </div> 
   )
 }
 

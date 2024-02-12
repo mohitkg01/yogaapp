@@ -35,7 +35,7 @@
     display: grid;
   }
   
-  .box button{
+  .box Link button{
     background-color: #bfcbe69c;
     padding: 0 20px 0 20px;
     border-radius: 15%;
@@ -68,7 +68,7 @@
     .p-left>img{
         width:100%;
     }
-    .box button{
+    .box Link button{
         width: 34%;
         
     }

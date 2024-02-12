@@ -3,7 +3,7 @@ import img1 from '../Assets/yoga.png';
 import img2 from '../Assets/yoga (1).png';
 import img3 from '../Assets/heartbeat.png';
 import '../Styles/Hompage.css';
-
+import { Link } from 'react-router-dom';
 const Homepage = () => {
   return (
     <div className="homepage" id='homepage'>
@@ -30,7 +30,7 @@ const Homepage = () => {
             <span>
                 <img src={img3} alt=""  style={{height:"50px" ,width:"50px"}}/>
                 <p>If you have paipations and breathing trouble</p>
-                <button>Subscription</button>
+                <Link to="/batch">Subscription</Link>
             </span>
             <span>
                 <img src={img2} alt="" style={{height:"50px" ,width:"50px"}}/>
