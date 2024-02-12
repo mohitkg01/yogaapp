@@ -18,7 +18,7 @@ const Bookpage = () => {
       <label htmlFor="phone">Phone:</label>
       <input type="tel" id="phone" name="phone" required />
 
-      <button type="submit" onClick={showMessage}><Link to="/homepage">Submit</Link></button>
+      <button type="submit" onClick={showMessage}><Link to="/">Submit</Link></button>
     </form>
   </div>
   )
